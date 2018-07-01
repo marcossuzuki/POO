@@ -1,0 +1,44 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package "aleatorio"{
+    class NumeroAleatorio
+}
+
+package "racional"{
+    class NumeroRacional
+    class MatrizRacional
+}
+
+NumeroRacional o-- MatrizRacional
+
+class NumeroAleatorio{
+    __
+    {static} +getAleatorio():int
+}
+
+class NumeroRacional {
+    -numerador:int 
+    -denominador:int
+    __
+    +NumeroRacional()
+    +NumeroRacional(int int)
+    -getMDC(int int):int
+    -simplificar():void
+    +soma(NumeroRacional):void
+    +getString():String
+
+}
+
+class MatrizRacional {
+    -matriz[][]:NumeroRacional
+    -{static}tamanho:int
+    __
+    +Matriz()
+    +Matriz(int int)
+    +soma():void
+    +imprimir():void
+    +preencherAleatorio():void
+}
+
+@enduml
