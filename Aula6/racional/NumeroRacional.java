@@ -4,10 +4,10 @@ import aleatorio.*;
 
 public class NumeroRacional {
 
-    int numerador, denominador;
+    private int numerador, denominador;
 
     public NumeroRacional() throws Exception {
-        this(NumeroAleatorio.getAleatorio(), NumeroAleatorio.getAleatorio());
+        this(NumeroAleatorio.getAleatorio(), NumeroAleatorio.getAleatorio()+1);
     }
 
     public NumeroRacional(int numerador, int denominador) throws Exception {
